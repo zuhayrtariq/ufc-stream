@@ -1,6 +1,6 @@
 import MuxPlayer from "@mux/mux-player-react";
 
-const VideoPlayer = ({ playbackId }: { playbackId: string }) => {
+const VideoPlayer = () => {
   return (
     <MuxPlayer
       playbackId={process.env.playbackId!}

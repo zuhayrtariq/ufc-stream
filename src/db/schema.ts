@@ -1,6 +1,4 @@
-import { relations } from "drizzle-orm";
 import {
-  integer,
   pgEnum,
   pgTable,
   text,
@@ -8,8 +6,6 @@ import {
   uniqueIndex,
   uuid,
   varchar,
-  primaryKey,
-  foreignKey,
 } from "drizzle-orm/pg-core";
 
 export const plansEnum = pgEnum("plans", [

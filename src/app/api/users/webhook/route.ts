@@ -56,14 +56,14 @@ export async function POST(req: Request) {
 
   if (eventType == "user.created") {
     const { id, first_name, image_url } = evt.data;
-    const data = await db.insert(usersTable).values({
+    await db.insert(usersTable).values({
       clerkId: id,
       name: first_name || "User",
       imageUrl: image_url,
     });
   } else if (eventType == "user.updated") {
     const { id, first_name, image_url } = evt.data;
-    const data = await db
+    await db
       .update(usersTable)
       .set({
         name: first_name || "User",
@@ -75,7 +75,7 @@ export async function POST(req: Request) {
     if (!id) {
       return new Response("Missing User Id", { status: 400 });
     }
-    const data = await db.delete(usersTable).where(eq(usersTable.clerkId, id));
+    await db.delete(usersTable).where(eq(usersTable.clerkId, id));
   }
 
   return new Response("Webhook received", { status: 200 });

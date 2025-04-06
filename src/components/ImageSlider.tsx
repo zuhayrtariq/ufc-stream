@@ -2,11 +2,9 @@
 import { motion } from "motion/react";
 import React from "react";
 import { ImagesSlider } from "./ui/images-slider";
-import { useClerk } from "@clerk/nextjs";
-import { Radio, RadioTower } from "lucide-react";
+import { RadioTower } from "lucide-react";
 import Link from "next/link";
 export function ImagesSliderDemo() {
-  const { user } = useClerk();
   const images = [
     "/images/ufc.jpg",
     "/images/football.jpg",
