@@ -35,7 +35,6 @@
     "@vercel/speed-insights": "^1.2.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
-    "dotenv": "^16.4.7",
     "drizzle-orm": "^0.41.0",
     "drizzle-zod": "^0.7.1",
     "framer-motion": "^12.6.3",
